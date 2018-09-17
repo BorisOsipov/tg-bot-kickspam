@@ -1,0 +1,16 @@
+{
+  "name": "tg-ban-spam",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Boris Osipov <osipov.boris@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
