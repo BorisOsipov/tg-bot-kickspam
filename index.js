@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const config = require('./config');
 
-const token = process.env.TG_TOKEN || '698999729:AAFQr-NAYU5rVpKVktCp-foA3FR4WM6VSCg';
+const token = process.env.TG_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 const { watchGroupNames } = config;
 
