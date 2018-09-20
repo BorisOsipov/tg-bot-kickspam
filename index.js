@@ -5,15 +5,18 @@ const token = process.env.TG_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 const { watchGroupNames } = config;
 
-const TELEGRAM_URL_REGEX = /(https?:\/\/)?(www[.])?(telegram|t)\.me\/joinchat\/([a-zA-Z0-9_-]*)\/?/ig;
+const TELEGRAM_URL_PATTERN = '/joinchat/';
 
 const isMessageContainsLink = (message) => {
   let isLink = false;
 
   if (message.forward_from_message_id) {
     if (message.caption) {
-      isLink = isLink || TELEGRAM_URL_REGEX.test(message.caption);
+      isLink = isLink || message.caption.toLowerCase().includes(TELEGRAM_URL_PATTERN);
     }
+  }
+  if (message.text) {
+    isLink = isLink || message.text.toLowerCase().includes(TELEGRAM_URL_PATTERN);
   }
   return isLink;
 };
