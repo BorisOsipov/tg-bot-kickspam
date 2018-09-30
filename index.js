@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const TelegramBot = require('node-telegram-bot-api');
 const config = require('./config');
 
@@ -43,7 +44,12 @@ Link: https://t.me/${tgMessage.chat.username}/${tgMessage.message_id}
 `;
       await bot.sendMessage(config.forwardToChanelId, message);
     } catch (e) {
-      console.log(`Error: ${e}`);
+      console.log(`${new Date().toISOString()}: Error: ${e}`);
+      try {
+        console.log(`${new Date().toISOString()}: Message ${JSON.stringify(tgMessage)}`);
+      } catch (e) {
+        // ignored
+      }
     }
   }
 };
