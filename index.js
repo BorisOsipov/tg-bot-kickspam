@@ -28,6 +28,7 @@ const performActionsToSender = async (tgMessage) => {
 };
 
 const clearMessage = async (tgMessage) => {
+  console.log(tgMessage);
   const isLink = isMessageContainsLink(tgMessage);
 
   const isWatchedChannel = watchGroupNames.find(name =>
