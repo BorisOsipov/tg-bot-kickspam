@@ -2,15 +2,36 @@
   "name": "tg-ban-spam",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/filters.ts",
   "author": "Boris Osipov <osipov.boris@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "node ./node_modules/typescript/lib/tsc.js",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "pretest": "npm run lint",
+    "test": "jest --maxWorkers=4"
+  },
   "dependencies": {
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "typescript": "2.9.2",
+    "winston": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0"
+    "@types/node-telegram-bot-api": "^0.30.3",
+    "@types/jest": "^23.3.3",
+    "tslint": "^5.11.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
   }
 }
