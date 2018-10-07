@@ -1,0 +1,38 @@
+{
+  "message_id": 35679,
+  "from": {
+    "id": 619616117,
+    "is_bot": false,
+    "first_name": "XX",
+    "last_name": "XX",
+    "username": "XX"
+  },
+  "chat": {
+    "id": -1001187147299,
+    "title": "XX",
+    "username": "XX",
+    "type": "supergroup"
+  },
+  "date": 1538857667,
+  "forward_from_chat": {
+    "id": -1001222615784,
+    "title": "VIP Betting",
+    "type": "channel"
+  },
+  "forward_from_message_id": 85,
+  "forward_date": 1538856889,
+  "text": "Some text",
+  "entities": [
+    {
+      "offset": 0,
+      "length": 30,
+      "type": "bold"
+    },
+    {
+      "offset": 40,
+      "length": 20,
+      "type": "text_link",
+      "url": "https://t.me/joinchat/AAAAAFKmGtb2KnhvHHRpHg"
+    }
+  ]
+}

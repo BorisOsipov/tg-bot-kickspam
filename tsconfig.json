@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2017",
+    "inlineSourceMap": true,
+    "inlineSources": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "skipLibCheck": false
+  },
+  "exclude": [
+    "node_modules/"
+  ]
+}

@@ -1,0 +1,33 @@
+{ "message_id": 35641,
+  "from":
+  { "id": 379315703,
+    "is_bot": false,
+    "first_name": "XX",
+    "last_name": "X",
+    "username": "X" },
+  "chat":
+  { "id": -1001187147299,
+    "title": "XX",
+    "username": "qa_automation",
+    "type": "supergroup"
+  },
+  "date": 1538769436,
+  "reply_to_message":
+  {
+    "message_id": 35640,
+    "from":
+    { "id": 370025012,
+      "is_bot": false,
+      "first_name": "X",
+      "last_name": "X",
+      "username": "X" },
+    "chat":
+    { "id": -1001187147299,
+      "title": "XX",
+      "username": "X",
+      "type": "supergroup" },
+    "date": 1538767606,
+    "text": "some test"
+  },
+  "text": "ok"
+}

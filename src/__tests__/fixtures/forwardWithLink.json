@@ -1,0 +1,31 @@
+{
+  "message_id": 35644,
+  "from": {
+    "id": 648676565,
+    "is_bot": false,
+    "first_name": "XX",
+    "username": "X"
+  },
+  "chat": {
+    "id": -1001187147299,
+    "title": "X",
+    "username": "X",
+    "type": "supergroup"
+  },
+  "date": 1538776541,
+  "forward_from_chat": {
+    "id": -1001391709155,
+    "title": "X",
+    "type": "channel"
+  },
+  "forward_from_message_id": 172,
+  "forward_date": 1538776167,
+  "caption": "Это - та самая пошлая группа в ТГ!\n\nЗаходи, не пожалеешь 😈\n t.me/joinchat/AAAAAEn2qlnIyt_6j9L2xg",
+  "caption_entities": [
+    {
+      "offset": 61,
+      "length": 36,
+      "type": "url"
+    }
+  ]
+}
