@@ -9,7 +9,7 @@
     "build": "node ./node_modules/typescript/lib/tsc.js",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "pretest": "npm run lint",
-    "test": "jest"
+    "test": "jest --maxWorkers=4"
   },
   "dependencies": {
     "node-telegram-bot-api": "^0.30.0",
