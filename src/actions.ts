@@ -20,7 +20,7 @@ export async function restrictUser(bot: TelegramBot, message: Message) {
   try {
     await bot.deleteMessage(message.chat.id, message.message_id.toString());
     await bot.kickChatMember(message.chat.id, message.from.id.toString());
-    banLogger.warn(message);
+    banLogger.warn(JSON.stringify(message, null, 2));
   } catch (e) {
     errorLogger.error(e);
   }

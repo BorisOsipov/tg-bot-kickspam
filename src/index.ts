@@ -8,7 +8,7 @@ const token = process.env.TG_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 export const checkMessage = async (message: Message) => {
-  messagesLogger.info(message);
+  messagesLogger.info(JSON.stringify(message, null, 2));
   if (isWatchedChannel(message) && containsLink(message)) {
     await restrictUser(bot, message);
     await notify(bot, message);
