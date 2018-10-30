@@ -30,6 +30,20 @@ export const isMessageEntitiesContainLink = (message: Message) => {
   return false;
 };
 
+export const isMessageCaptionEntitiesContainLink = (message: Message) => {
+  // @ts-ignore
+  if (message.caption_entities && message.caption_entities.length > 0) {
+    // @ts-ignore
+    return message.caption_entities.some((entity) => {
+      if (entity.url) {
+        return entity.url.toLowerCase().includes(TELEGRAM_URL_PATTERN);
+      }
+      return false;
+    });
+  }
+  return false;
+};
+
 export const isWatchedChannel = (message: Message): boolean => {
   return watchGroupNames.some((name: string) =>
     (message.chat.username ? name === message.chat.username : false));
@@ -38,5 +52,6 @@ export const isWatchedChannel = (message: Message): boolean => {
 export const containsLink = (message: Message) => {
   return isMessageContainsLink(message)
     || isForwardContainsLink(message)
-    || isMessageEntitiesContainLink(message);
+    || isMessageEntitiesContainLink(message)
+    || isMessageCaptionEntitiesContainLink(message);
 };

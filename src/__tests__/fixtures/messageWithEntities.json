@@ -34,5 +34,13 @@
       "type": "text_link",
       "url": "https://t.me/joinchat/AAAAAFKmGtb2KnhvHHRpHg"
     }
+  ],
+  "caption_entities":[
+    {
+      "offset":53,
+      "length":12,
+      "type":"text_link",
+      "url":"https://t.me/joinchat/AAAAAEn2qlk62W3sO101yw"
+    }
   ]
 }

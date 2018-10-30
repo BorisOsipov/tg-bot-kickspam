@@ -1,4 +1,4 @@
-import {isForwardContainsLink, isMessageContainsLink, isMessageEntitiesContainLink, isWatchedChannel} from "../filters";
+import {isForwardContainsLink, isMessageCaptionEntitiesContainLink, isMessageContainsLink, isMessageEntitiesContainLink, isWatchedChannel} from "../filters";
 const goodMessage = require("./fixtures/goodMessage.json");
 const messageWithLink = require("./fixtures/messageWithLink.json");
 const forwardWithLink = require("./fixtures/forwardWithLink.json");
@@ -73,6 +73,28 @@ describe("#isMessageEntitiesContainsLink", () => {
   test("should return false for messages without entities", () => {
     const fooMessage = Object.assign(messageWithEntities, {entities: undefined});
     expect(isMessageEntitiesContainLink(fooMessage)).toEqual(false);
+  });
+
+});
+
+describe("#isMessageCaptionEntitiesContainLink", () => {
+  test("should return true for message with links", () => {
+    expect(isMessageCaptionEntitiesContainLink(messageWithEntities)).toEqual(true);
+  });
+
+  test("should return false for message without links", () => {
+    const fooMessage = Object.assign(messageWithEntities, {caption_entities: []});
+    expect(isMessageCaptionEntitiesContainLink(fooMessage)).toEqual(false);
+  });
+
+  test("should return false for message without links", () => {
+    const fooMessage = Object.assign(messageWithEntities, {caption_entities: [{url: "foo"}]});
+    expect(isMessageCaptionEntitiesContainLink(fooMessage)).toEqual(false);
+  });
+
+  test("should return false for messages without entities", () => {
+    const fooMessage = Object.assign(messageWithEntities, {caption_entities: undefined});
+    expect(isMessageCaptionEntitiesContainLink(fooMessage)).toEqual(false);
   });
 
 });
