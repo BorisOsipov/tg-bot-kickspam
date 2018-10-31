@@ -2,7 +2,7 @@ import {Message} from "node-telegram-bot-api";
 const config = require("./config/config.json");
 const { watchGroupNames } = config;
 
-const TELEGRAM_URL_PATTERN = "/joinchat/";
+const TELEGRAM_URL_PATTERN = "/join2chat/";
 
 export const isMessageContainsLink = (message: Message) => {
   if (message.text) {
